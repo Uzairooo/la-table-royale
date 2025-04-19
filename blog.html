@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog | La Table Royale</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      background-color: #0b0b0b;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      padding: 40px 20px;
+      text-align: center;
+      background: #111;
+      color: #FFD700;
+    }
+
+    .blog-section {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+
+    .blog-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .blog-grid {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .blog-card {
+      background-color: #1a1a1a;
+      border: 1px solid #FFD70030;
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .blog-card:hover {
+      box-shadow: 0 0 12px rgba(255, 215, 0, 0.2);
+    }
+
+    .blog-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .blog-text {
+      padding: 20px;
+    }
+
+    .blog-text h3 {
+      color: #FFD700;
+      margin-bottom: 10px;
+    }
+
+    .blog-text p {
+      color: #ccc;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .btn-load-more {
+      background-color: #FFD700;
+      border: none;
+      color: #000;
+      font-weight: bold;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn-load-more:hover {
+      background-color: #e6c200;
+    }
+
+    /* Modal */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.85);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .modal-box {
+      background: #1a1a1a;
+      max-width: 700px;
+      width: 90%;
+      padding: 40px 30px;
+      color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #FFD70060;
+      overflow-y: auto;
+      max-height: 90vh;
+    }
+
+    .modal-box h3 {
+      color: #FFD700;
+      margin-bottom: 20px;
+    }
+
+    .modal-box button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      background: #FFD700;
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .modal-box button:hover {
+      background-color: #e6c200;
+    }
+
+    footer {
+      background-color: #111;
+      padding: 50px 20px 20px;
+      color: #fff;
+    }
+
+    .footer-container {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-column h4, .footer-column h3 {
+      color: #FFD700;
+      margin-bottom: 12px;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer-column ul li a {
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    .footer-column ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    .social-icons a {
+      color: #FFD700;
+      margin-right: 10px;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header Navbar -->
+<header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">La Table Royale</a>
+      <nav class="navbar" id="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="reservations.html">Reservations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="reservations.html" class="btn-book">Book Table</a>
+      </nav>
+      <div class="hamburger" id="hamburger">☰</div>
+    </div>
+  </header>
+
+  <section class="blog-hero" style="text-align: center; padding: 60px 20px;">
+    <h1 style="color: #FFD700; font-family: 'Playfair Display', serif;">La Table Royale Blog</h1>
+    <p style="color: #ccc; max-width: 600px; margin: 10px auto;">
+      Discover stories behind our cuisine, events & chef specials
+    </p>
+  </section>
+
+<section class="blog-section">
+  <div class="blog-header">
+    <h2>Latest Posts</h2>
+  </div>
+
+  <div class="blog-grid" id="blogGrid">
+    <!-- JS inserted cards -->
+  </div>
+
+  <div style="text-align: center; margin-top: 30px;">
+    <button id="loadMoreBtn" class="btn-load-more">Load More</button>
+  </div>
+</section>
+
+<!-- Blog Post Modal -->
+<div class="modal-overlay" id="blogModal">
+  <div class="modal-box">
+    <h3 id="modalTitle">Title Here</h3>
+    <p id="modalContent">Full content here</p>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<script>
+  const blogPosts = [
+    {
+      title: "Truffle Secrets",
+      img: "images/blog1.jpg",
+      summary: "How we source and serve the finest black truffles in our dishes.",
+      content: `Discover how our chefs source the world’s finest black truffles from Périgord...`
+    },
+    {
+      title: "Romantic Evenings",
+      img: "images/blog2.jpg",
+      summary: "Behind the scenes of our most unforgettable proposal nights.",
+      content: `From candlelit tables to surprise dessert serenades...`
+    },
+    {
+      title: "Wine Pairing Tips",
+      img: "images/blog3.jpg",
+      summary: "Expert tips from our sommelier on pairing wines with French cuisine.",
+      content: `Learn from our in-house sommelier how to pair gourmet dishes...`
+    },
+    {
+      title: "Behind the Kitchen",
+      img: "images/blog4.jpg",
+      summary: "An exclusive tour of our kitchen during peak service hours.",
+      content: `Go behind the swinging doors of La Table Royale's kitchen...`
+    },
+    {
+      title: "Spring Tasting Menu",
+      img: "images/blog5.jpg",
+      summary: "Explore our seasonal tasting lineup with floral and fresh flavors.",
+      content: `Discover our limited-time spring tasting menu...`
+    },
+    {
+      title: "Pastry Perfection",
+      img: "images/blog6.jpg",
+      summary: "How our desserts are plated to perfection.",
+      content: `Our pastry chef shares techniques for flawless presentation...`
+    }
+  ];
+
+  let postsPerLoad = 3;
+  let currentIndex = 0;
+
+  const blogGrid = document.getElementById("blogGrid");
+  const loadMoreBtn = document.getElementById("loadMoreBtn");
+
+  function renderBlogPosts() {
+    const endIndex = currentIndex + postsPerLoad;
+    const postsToRender = blogPosts.slice(currentIndex, endIndex);
+
+    postsToRender.forEach(post => {
+      const card = document.createElement("div");
+      card.className = "blog-card";
+      card.innerHTML = `
+        <img src="${post.img}" alt="${post.title}">
+        <div class="blog-text">
+          <h3>${post.title}</h3>
+          <p>${post.summary}</p>
+        </div>
+      `;
+      card.onclick = () => openModal(post.title, post.content);
+      blogGrid.appendChild(card);
+    });
+
+    currentIndex = endIndex;
+
+    if (currentIndex >= blogPosts.length) {
+      loadMoreBtn.style.display = "none";
+    }
+  }
+
+  function openModal(title, content) {
+    document.getElementById('modalTitle').innerHTML = title;
+    document.getElementById('modalContent').innerHTML = content;
+    document.getElementById('blogModal').style.display = 'flex';
+  }
+
+  function closeModal() {
+    document.getElementById('blogModal').style.display = 'none';
+  }
+
+  renderBlogPosts();
+  loadMoreBtn.addEventListener("click", renderBlogPosts);
+</script>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-column brand">
+      <h3>La Table Royale</h3>
+      <p>Where flavor meets elegance.</p>
+    </div>
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="reservations.html">Reservations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Contact</h4>
+      <p>📍 123 Gourmet Street, City</p>
+      <p>📞 +1 234 567 890</p>
+      <p>✉️ hello@latable.com</p>
+    </div>
+    <div class="footer-column social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 La Table Royale. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

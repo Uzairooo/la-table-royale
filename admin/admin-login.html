@@ -1,0 +1,101 @@
+<!-- File: admin-login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login | La Table Royale</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #0b0b0b;
+      font-family: 'Playfair Display', serif;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-container {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 215, 0, 0.2);
+      backdrop-filter: blur(10px);
+      padding: 50px 40px;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 15px 30px rgba(255, 215, 0, 0.1);
+    }
+
+    .login-container h2 {
+      text-align: center;
+      color: #FFD700;
+      margin-bottom: 30px;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 14px;
+      margin: 12px 0;
+      background: #1a1a1a;
+      border: 1px solid #FFD700;
+      color: #fff;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 14px;
+      background: #FFD700;
+      border: none;
+      border-radius: 30px;
+      color: #000;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .login-container button:hover {
+      background: #e6c200;
+      box-shadow: 0 0 12px 2px #FFD70080;
+    }
+
+    .login-note {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #aaa;
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Admin Access</h2>
+    <form onsubmit="return login(event)">
+      <input type="text" placeholder="Username" id="adminUsername" required />
+      <input type="password" placeholder="Password" id="adminPassword" required />
+      <button type="submit">Login</button>
+    </form>
+    <p class="login-note">Only authorized personnel may access this area</p>
+  </div>
+
+  <script>
+    function login(e) {
+      e.preventDefault();
+      const user = document.getElementById('adminUsername').value;
+      const pass = document.getElementById('adminPassword').value;
+
+      if (user === "admin" && pass === "royale123") {
+        window.location.href = "admin/admin-dashboard.html";
+      } else {
+        alert("Invalid credentials. Please try again.");
+      }
+    }
+  </script>
+</body>
+</html>

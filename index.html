@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Table Royale | Home</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- Header/Navbar -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">La Table Royale</a>
+      <nav class="navbar" id="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="reservations.html">Reservations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="reservations.html" class="btn-book">Book Table</a>
+      </nav>
+      <div class="hamburger" id="hamburger">☰</div>
+    </div>
+  </header>
+
+  <section class="homepage-slider" id="homepageSlider">
+    <!-- Slide 1 -->
+    <div class="slide fade active">
+      <img src="images/slide1-gourmet-table.jpg" alt="Gourmet Table" />
+      <div class="hero-overlay">
+        <div class="hero-content" data-aos="fade-up">
+          <h1 class="hero-title">Experience Culinary Excellence</h1>
+          <p class="hero-subtitle">Where fine dining meets timeless elegance</p>
+          <div class="hero-buttons">
+            <a href="menu.html" class="btn-outline">View Menu</a>
+            <a href="reservations.html" class="btn-gold">Book Table</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Slide 2 -->
+    <div class="slide fade">
+      <img src="images/slide2-chef-action.jpg" alt="Chef in Action" />
+      <div class="hero-overlay">
+        <div class="hero-content" data-aos="fade-up">
+          <h1 class="hero-title">Crafted by Culinary Masters</h1>
+          <p class="hero-subtitle">Every plate tells a story of taste and tradition</p>
+          <div class="hero-buttons">
+            <a href="about.html" class="btn-outline">Meet the Chef</a>
+            <a href="menu.html" class="btn-gold">Explore Dishes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Slide 3 -->
+    <div class="slide fade">
+      <img src="images/slide3-wine-dessert.jpg" alt="Wine and Dessert" />
+      <div class="hero-overlay">
+        <div class="hero-content" data-aos="fade-up">
+          <h1 class="hero-title">Romance. Wine. Indulgence.</h1>
+          <p class="hero-subtitle">The perfect ambiance for your special night</p>
+          <div class="hero-buttons">
+            <a href="reservations.html" class="btn-outline">Reserve Now</a>
+            <a href="contact.html" class="btn-gold">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Arrows -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+    <!-- Dot indicators -->
+<div class="slider-dots" id="sliderDots">
+  <span class="dot active" onclick="goToSlide(0)"></span>
+  <span class="dot" onclick="goToSlide(1)"></span>
+  <span class="dot" onclick="goToSlide(2)"></span>
+</div>
+  </section>
+
+  <!--
+  <section class="hero">
+    <div class="hero-overlay">
+      <div class="hero-content" data-aos="fade-up">
+        <h1 class="hero-title">Experience Culinary Excellence</h1>
+        <p class="hero-subtitle">Where fine dining meets timeless elegance</p>
+        <div class="hero-buttons">
+          <a href="menu.html" class="btn-outline">View Menu</a>
+          <a href="reservations.html" class="btn-gold">Book Table</a>
+        </div>
+      </div>
+    </div>
+  </section>
+-->
+
+  <!-- About -->
+  <section class="about" data-aos="fade-up">
+    <div class="about-container">
+      <div class="about-image" data-aos="fade-right">
+        <img src="images/about-restaurant.jpg" alt="Elegant Dining Room" />
+      </div>
+      <div class="about-text" data-aos="fade-left">
+        <h2>Welcome to La Table Royale</h2>
+        <p>
+            At La Table Royale, we believe that every meal should be a celebration of flavor and elegance.
+            Our award-winning chefs craft each dish with passion, using only the finest seasonal ingredients.
+          </p>
+          <p>
+            Nestled in the heart of the city, our restaurant blends timeless luxury with a warm, inviting atmosphere —
+            creating unforgettable experiences since 2005.
+          </p>
+        <a href="about.html" class="btn-gold">Meet the Chef</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Dishes -->
+  <section class="featured" data-aos="fade-up">
+    <div class="featured-header">
+      <h2>Signature Dishes</h2>
+      <p>Crafted by masters, loved by guests</p>
+    </div>
+    <div class="featured-grid">
+      <!-- Truffle Risotto -->
+      <div class="dish-card" data-aos="fade-up">
+        <div class="dish-image">
+          <img src="images/dish1.jpg" alt="Truffle Risotto" />
+          <span class="badge">Best Seller</span>
+          <div class="hover-info">
+            <p><strong>Calories:</strong> 520 kcal</p>
+            <p><strong>Ingredients:</strong> Arborio rice, truffle oil, parmesan</p>
+            <p><strong>Allergens:</strong> Dairy</p>
+          </div>
+        </div>
+        <h3>Truffle Risotto</h3>
+        <p>Arborio rice, parmesan, black truffle oil</p>
+        <div class="dish-meta">
+          <span class="price">$28</span>
+          <span class="rating">⭐ 4.9 (122 reviews)</span>
+        </div>
+        <span class="tag">👨‍🍳 Chef’s Pick</span>
+      </div>
+
+      <!-- Lamb Chops -->
+      <div class="dish-card" data-aos="fade-up">
+        <div class="dish-image">
+          <img src="images/dish2.jpg" alt="Lamb Chops Royale" />
+          <span class="badge">Best Seller</span>
+          <div class="hover-info">
+            <p><strong>Calories:</strong> 520 kcal</p>
+            <p><strong>Ingredients:</strong> Herb-marinated, slow-roasted, rosemary glaze</p>
+            <p><strong>Allergens:</strong> Dairy</p>
+          </div>
+        </div>
+        <h3>Lamb Chops Royale</h3>
+        <p>Herb-marinated, slow-roasted, rosemary glaze</p>
+        <div class="dish-meta">
+          <span class="price">$42</span>
+          <span class="rating">⭐ 4.9 (122 reviews)</span>
+        </div>
+        <span class="tag">👨‍🍳 Chef’s Pick</span>
+      </div>
+
+      <!-- Chocolate Soufflé -->
+      <div class="dish-card" data-aos="fade-up">
+        <div class="dish-image">
+          <img src="images/dish3.jpg" alt="Chocolate Soufflé" />
+          <span class="badge">Best Seller</span>
+          <div class="hover-info">
+            <p><strong>Calories:</strong> 520 kcal</p>
+            <p><strong>Ingredients:</strong> Molten dark chocolate, vanilla bean cream</p>
+            <p><strong>Allergens:</strong> Dairy</p>
+          </div>
+        </div>
+        <h3>Chocolate Soufflé</h3>
+        <p>Molten dark chocolate, vanilla bean cream</p>
+        <div class="dish-meta">
+          <span class="price">$28</span>
+          <span class="rating">⭐ 4.9 (122 reviews)</span>
+        </div>
+        <span class="tag">👨‍🍳 Chef’s Pick</span>
+      </div>
+    </div>
+    <div class="featured-btn">
+      <a href="menu.html" class="btn-outline">See Full Menu</a>
+    </div>
+  </section>
+
+  <!-- Chef Quote -->
+  <section class="chef-quote" data-aos="fade-in">
+    <div class="chef-quote-container">
+      <div class="chef-quote-text">
+        <h3>“Cooking is an art — but serving it with love is the true masterpiece.”</h3>
+        <p>— Chef Alexandre Moreau, Executive Chef</p>
+      </div>
+      <div class="chef-quote-img">
+        <img src="images/chef-portrait.jpg" alt="Chef Alexandre Moreau">
+      </div>
+    </div>
+  </section>
+
+  <!-- Seasonal Tasting -->
+  <section class="tasting-menu" data-aos="fade-up">
+    <div class="tasting-container">
+      <div class="tasting-text">
+        <h2>Seasonal Tasting Experience</h2>
+        <p>Discover our limited-time tasting menu — a curated journey through exquisite flavors,
+            seasonal ingredients, and culinary storytelling.</p>
+        <a href="menu.html" class="btn-gold">Explore the Menu</a>
+      </div>
+      <div class="tasting-img">
+        <img src="images/tasting-menu.jpg" alt="Seasonal Tasting Menu" />
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="reservation-cta" data-aos="zoom-in">
+    <div class="cta-container">
+      <div class="cta-text">
+        <h3>Reserve Your Experience at La Table Royale</h3>
+        <p>Tables fill fast — secure your culinary journey today.</p>
+      </div>
+      <a href="reservations.html" class="btn-gold cta-btn">Book a Table</a>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials" data-aos="fade-up">
+    <div class="testimonials-container">
+      <h2 class="section-title">What Our Guests Say</h2>
+      <div class="testimonial-fade-wrapper">
+        <div class="testimonial-slider">
+          <!-- Testimonial Cards (unchanged) -->
+          <div class="testimonial-card">
+            <img src="https://i.pravatar.cc/100?img=12" alt="Review 1">
+            <p>“A divine experience from start to finish. Every bite was a masterpiece.”</p>
+            <h4>Isabelle D.</h4>
+            <span>⭐️⭐️⭐️⭐️⭐️</span>
+          </div>
+    
+          <div class="testimonial-card">
+            <img src="https://i.pravatar.cc/100?img=30" alt="Review 2">
+            <p>“Best lamb chops I’ve ever had. Ambiance was simply royal.”</p>
+            <h4>Thomas R.</h4>
+            <span>⭐️⭐️⭐️⭐️⭐️</span>
+          </div>
+    
+          <div class="testimonial-card">
+            <img src="https://i.pravatar.cc/100?img=17" alt="Review 3">
+            <p>“The service was flawless. It felt like dining in a movie scene.”</p>
+            <h4>Nadia K.</h4>
+            <span>⭐️⭐️⭐️⭐️⭐️</span>
+          </div>
+    
+          <div class="testimonial-card">
+            <img src="https://i.pravatar.cc/100?img=34" alt="Review 4">
+            <p>“Impressive wine selection and desserts to die for. 10/10.”</p>
+            <h4>Vincent L.</h4>
+            <span>⭐️⭐️⭐️⭐️⭐️</span>
+          </div>
+    
+          <div class="testimonial-card">
+            <img src="https://i.pravatar.cc/100?img=22" alt="Review 5">
+            <p>“Made our anniversary unforgettable. We’ll definitely be back.”</p>
+            <h4>Layla H.</h4>
+            <span>⭐️⭐️⭐️⭐️⭐️</span>
+          </div>
+    
+          <div class="testimonial-card">
+            <img src="https://i.pravatar.cc/100?img=40" alt="Review 6">
+            <p>“Luxury, flavor, atmosphere — all perfectly blended.”</p>
+            <h4>Olivier S.</h4>
+            <span>⭐️⭐️⭐️⭐️⭐️</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Preview -->
+  <section class="gallery-preview" data-aos="fade-up">
+    <div class="gallery-container">
+      <h2 class="section-title">A Glimpse Inside</h2>
+      <div class="gallery-grid">
+        <img src="images/homegallery1.jpg" alt="Interior Ambiance">
+        <img src="images/homegallery2.jpg" alt="Table Setting">
+        <img src="images/homegallery3.jpg" alt="Signature Dish">
+        <img src="images/homegallery4.jpg" alt="Chef at Work">
+        <img src="images/homegallery5.jpg" alt="Wine & Cheese">
+        <img src="images/homegallery6.jpg" alt="Dining Guests">
+      </div>
+      <a href="about.html" class="btn-outline">View Full Gallery</a>
+    </div>
+  </section>
+
+  <!-- Press Strip -->
+  <section class="press-strip" data-aos="fade-up">
+    <div class="press-container">
+      <p class="press-intro">Featured In</p>
+      <div class="press-logos">
+        <img src="images/forbes-logo.png" alt="Forbes" />
+        <img src="images/michelin-logo.png" alt="Michelin Guide" />
+        <img src="images/tripadvisor-logo.png" alt="TripAdvisor" />
+        <img src="images/luxury-mag-logo.png" alt="Luxury Magazine" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-column brand">
+            <h3>La Table Royale</h3>
+            <p>Where flavor meets elegance.</p>
+          </div>
+      
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="reservations.html">Reservations</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="blog.html">Blog</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-column">
+            <h4>Contact</h4>
+            <p>📍 123 Gourmet Street, City</p>
+            <p>📞 +1 234 567 890</p>
+            <p>✉️ hello@latable.com</p>
+          </div>
+      
+          <div class="footer-column social">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-x-twitter"></i></a>
+            </div>
+          </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 La Table Royale. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  </script>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

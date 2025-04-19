@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reservations | La Table Royale</title>
+
+  <!-- Fonts + CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" data-aos="fade-down">
+    <div class="container">
+        <a href="index.html" class="logo">La Table Royale</a>
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="reservations.html">Reservations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="reservations.html" class="btn-book">Book Table</a>
+      </nav>
+      <div class="hamburger" id="hamburger">☰</div>
+    </div>
+  </header>
+
+  <!-- Reservation Section -->
+  <section class="reservation-section" data-aos="fade-up">
+    <div class="reservation-container">
+      <h2>Reserve Your Table</h2>
+      <p>We look forward to hosting you</p>
+      <div class="form-glass">
+        <form class="reservation-form" id="reservationForm">
+          <input type="text" name="name" placeholder="Full Name" required />
+          <input type="email" name="email" placeholder="Email Address" required />
+          <input type="tel" name="phone" placeholder="Phone Number" pattern="[0-9]{10,15}" required />
+          <input type="text" id="datetime" name="datetime" placeholder="Select Date & Time" required />
+          <select name="guests" required>
+            <option value="">Guests</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4+">4+</option>
+          </select>
+          <label for="tableType" class="form-label">Preferred Table Type</label>
+          <select name="tableType" id="tableType" required>
+            <option value="">Choose your seating</option>
+            <option value="Window">Window</option>
+            <option value="Outdoor">Outdoor</option>
+            <option value="Private Room">Private Room</option>
+            <option value="No Preference">No Preference</option>
+          </select>
+          <textarea name="message" placeholder="Special requests or dietary needs (e.g. vegetarian, nut allergy, seating preferences)"></textarea>
+          <button type="submit" class="btn-gold">Book Now</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+ <!-- Opening Hours + Map Section -->
+<section class="hours-location">
+  <div class="hours-location-container">
+    <div class="hours-box" data-aos="fade-right">
+      <h3>🕰 Opening Hours</h3>
+      <ul>
+        <li><strong>Monday – Thursday:</strong> 12:00 PM – 10:00 PM</li>
+        <li><strong>Friday – Saturday:</strong> 12:00 PM – 11:30 PM</li>
+        <li><strong>Sunday:</strong> Closed</li>
+      </ul>
+    </div>
+    <div class="location-box" data-aos="fade-left">
+      <h3>📍 Visit Us</h3>
+      <p>La Table Royale, 123 Golden Avenue, Luxury District, City</p>
+      <div class="map-embed">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243646.5732329584!2d-74.0059413!3d40.7127752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xabc123!2sLa%20Table%20Royale!5e0!3m2!1sen!2s!4v1234567890" width="100%" height="250" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section" data-aos="fade-up">
+    <h3 class="faq-heading">Booking Policies & FAQs</h3>
+    <div class="faq-container">
+      <div class="faq-item">
+        <button class="faq-question">Can I cancel my reservation?</button>
+        <div class="faq-answer">
+          <p>Yes, we allow free cancellations up to 4 hours before your reservation time.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Do you accept walk-ins?</button>
+        <div class="faq-answer">
+          <p>Yes, subject to availability. We recommend booking in advance for weekends.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How long is my table held?</button>
+        <div class="faq-answer">
+          <p>Your table is held for 15 minutes past the booking time before being released.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Is there a dress code?</button>
+        <div class="faq-answer">
+          <p>Smart casual. Shorts, flip-flops, and sportswear are not permitted.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Private Dining Section -->
+<section class="private-dining">
+  <div class="private-content">
+    <div class="private-text" data-aos="fade-right">
+      <h3>👨‍🍳 Private Dining & Events</h3>
+      <p>
+        Whether you're planning an intimate celebration, corporate dinner, or a luxurious event,
+        La Table Royale offers elegant private dining experiences tailored to your needs.
+      </p>
+      <ul>
+        <li>🎂 Birthdays & Anniversaries</li>
+        <li>💼 Corporate Dinners</li>
+        <li>💍 Engagements & Special Proposals</li>
+        <li>🎉 Customizable Set Menus & Decor</li>
+      </ul>
+      <a href="contact.html" class="btn-gold">Inquire Now</a>
+    </div>
+    <div class="private-image" data-aos="fade-left">
+      <img src="images/private-dining.jpg" alt="Private Dining Room" />
+    </div>
+  </div>
+</section>
+
+  <!-- Gallery Section -->
+  <section class="reservation-gallery" data-aos="fade-up">
+    <h3 class="section-title">Our Dining Experience</h3>
+    <div class="gallery-grid">
+      <img src="images/gallery1.jpg" alt="Elegant table setting" />
+      <img src="images/gallery2.jpg" alt="Candle-lit dinner" />
+      <img src="images/gallery3.jpg" alt="Gourmet dish closeup" />
+      <img src="images/gallery4.jpg" alt="Cozy interior design" />
+    </div>
+  </section>
+
+  <!-- Special Offers -->
+  <section class="special-offers" data-aos="fade-up">
+    <h3 class="section-title">Special Offers</h3>
+    <div class="offers-grid">
+      <div class="offer-card">
+        <h4>3-Course Dinner</h4>
+        <p>Enjoy a luxurious 3-course set menu with wine pairing — only $59 per guest.</p>
+        <span class="tag">Limited Time</span>
+      </div>
+      <div class="offer-card">
+        <h4>Weekday Lunch</h4>
+        <p>Book between 12–3 PM (Mon–Thu) and get 15% off your total bill.</p>
+        <span class="tag">Lunch Promo</span>
+      </div>
+      <div class="offer-card">
+        <h4>Valentine’s Night</h4>
+        <p>Reserve early for our candle-lit Valentine’s dinner with a surprise gift.</p>
+        <span class="tag">Pre-Booking Open</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Note From Chef -->
+  <section class="note-from-chef" data-aos="fade-up">
+    <div class="chef-container">
+      <h3 class="chef-heading">A Note from the Chef</h3>
+      <p>
+        "Every dish we serve is a reflection of our passion for excellence.  
+        Whether you're celebrating a special moment or just enjoying a night out,  
+        we promise an unforgettable dining experience tailored to your preferences."
+      </p>
+      <p class="chef-signature">— Chef Alexandre Moreau</p>
+    </div>
+  </section>
+
+  <!-- Confirmation Modal -->
+  <div id="confirmationModal" class="modal-overlay">
+    <div class="modal-box">
+      <h3>🎉 Reservation Confirmed!</h3>
+      <p>We’ve received your booking. We can’t wait to serve you!</p>
+      <button id="closeModal" class="btn-gold">Close</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column brand">
+        <h3>La Table Royale</h3>
+        <p>Where flavor meets elegance.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="reservations.html">Reservations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <p>📍 123 Gourmet Street, City</p>
+        <p>📞 +1 234 567 890</p>
+        <p>✉️ hello@latable.com</p>
+      </div>
+      <div class="footer-column social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 La Table Royale. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JS Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1000, once: true });</script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>La Table Royale – AI Assistant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Playfair Display', serif;
+      background: #0e0e0e;
+      color: #fff;
+      height: 100vh;
+    }
+
+    /* AI Assistant Bubble */
+    .chat-bubble {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: #FFD700;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      color: #000;
+      font-size: 1.5rem;
+      text-align: center;
+      line-height: 60px;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+      z-index: 1000;
+    }
+
+    .chat-window {
+      position: fixed;
+      bottom: 100px;
+      right: 25px;
+      width: 300px;
+      background: #1a1a1a;
+      border: 1px solid #FFD700;
+      border-radius: 12px;
+      display: none;
+      flex-direction: column;
+      z-index: 999;
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.15);
+    }
+
+    .chat-header {
+      padding: 12px;
+      background: #FFD700;
+      color: #000;
+      font-weight: bold;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      text-align: center;
+    }
+
+    .chat-body {
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .message.bot {
+      background: #333;
+      padding: 10px 14px;
+      border-radius: 12px;
+      color: #fff;
+      font-size: 0.95rem;
+    }
+
+    .quick-options button {
+      background-color: #FFD700;
+      color: #000;
+      border: none;
+      padding: 10px;
+      border-radius: 8px;
+      margin: 5px 0;
+      width: 100%;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .quick-options button:hover {
+      background-color: #e6c200;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- AI Assistant Bubble -->
+  <div class="chat-bubble" onclick="toggleChat()">💬</div>
+
+  <!-- Chat Window -->
+  <div class="chat-window" id="chatWindow">
+    <div class="chat-header">AI Assistant</div>
+    <div class="chat-body" id="chatBody">
+      <div class="message bot">👋 Hi! How can I assist you today?</div>
+      <div class="quick-options">
+        <button onclick="location.href='reservations.html'">📅 Make a Reservation</button>
+        <button onclick="location.href='tel:+123456789'">📞 Call Us</button>
+        <button onclick="location.href='contact.html'">✉️ Contact Page</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleChat() {
+      const chat = document.getElementById('chatWindow');
+      chat.style.display = chat.style.display === 'flex' ? 'none' : 'flex';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu | La Table Royale</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">La Table Royale</a>
+      <nav class="navbar" id="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="reservations.html">Reservations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="reservations.html" class="btn-book">Book Table</a>
+      </nav>
+      <div class="hamburger" id="hamburger">☰</div>
+    </div>
+  </header>
+
+  <section class="menu" data-aos="fade-up">
+    <div class="menu-header">
+      <h2>Our Full Menu</h2>
+      <p>Explore our chef-crafted culinary delights</p>
+    </div>
+
+    <div class="menu-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="starters">Starters</button>
+      <button class="filter-btn" data-filter="mains">Mains</button>
+      <button class="filter-btn" data-filter="desserts">Desserts</button>
+      <button class="filter-btn" data-filter="drinks">Drinks</button>
+    </div>
+
+    <div class="menu-search-container">
+      <input type="text" id="menuSearch" placeholder="Search dishes..." class="menu-search" />
+    </div>
+
+    <div class="menu-grid">
+      <!-- Dish 1 -->
+      <div class="dish-card" data-category="mains">
+        <div class="dish-image">
+          <img src="images/dish1.jpg" alt="Truffle Risotto" />
+          <span class="badge">Best Seller</span>
+          <div class="hover-info">
+            <p><strong>Calories:</strong> 520 kcal</p>
+            <p><strong>Ingredients:</strong> Arborio rice, truffle oil, parmesan</p>
+            <p><strong>Allergens:</strong> Dairy</p>
+          </div>
+        </div>
+        <h3>Truffle Risotto</h3>
+        <p>Arborio rice, parmesan, black truffle oil</p>
+        <div class="dish-meta">
+          <span class="price">$28</span>
+          <span class="rating">4.9 (122 reviews)</span>
+        </div>
+        <span class="tag">👨‍🍳 Chef’s Pick</span>
+      </div>
+  
+      <!-- Dish 2 -->
+      <div class="dish-card" data-category="desserts">
+        <div class="dish-image">
+          <img src="images/dish3.jpg" alt="Chocolate Soufflé" />
+          <span class="badge">Signature</span>
+          <div class="hover-info">
+            <p><strong>Calories:</strong> 430 kcal</p>
+            <p><strong>Ingredients:</strong> Dark chocolate, egg, vanilla</p>
+            <p><strong>Allergens:</strong> Eggs, dairy</p>
+          </div>
+        </div>
+        <h3>Chocolate Soufflé</h3>
+        <p>Molten dark chocolate, vanilla bean cream</p>
+        <div class="dish-meta">
+          <span class="price">$18</span>
+          <span class="rating">4.9 (107 reviews)</span>
+        </div>
+        <span class="tag">🍫 Dessert Delight</span>
+      </div>
+  
+      <!-- Dish 3 -->
+      <div class="dish-card" data-category="starters">
+        <div class="dish-image">
+          <img src="images/dish22.jpg" alt="Crab Cakes" />
+          <span class="badge">Guest Favorite</span>
+          <div class="hover-info">
+            <p><strong>Calories:</strong> 350 kcal</p>
+            <p><strong>Ingredients:</strong> Crab, breadcrumbs, aioli</p>
+            <p><strong>Allergens:</strong> Shellfish</p>
+          </div>
+        </div>
+        <h3>Crab Cakes</h3>
+        <p>Golden seared, served with lemon aioli</p>
+        <div class="dish-meta">
+          <span class="price">$22</span>
+          <span class="rating">4.8 (94 reviews)</span>
+        </div>
+        <span class="tag">🌟 Guest Favorite</span>
+      </div>
+  
+      <!-- Dish 4 -->
+      <div class="dish-card" data-category="drinks">
+        <div class="dish-image">
+          <img src="images/drink.jpg" alt="Royal Martini" />
+          <span class="badge">Classic</span>
+          <div class="hover-info">
+            <p><strong>ABV:</strong> 14%</p>
+            <p><strong>Ingredients:</strong> Vodka, vermouth, olive</p>
+          </div>
+        </div>
+        <h3>Royal Martini</h3>
+        <p>Premium blend with a twist of citrus</p>
+        <div class="dish-meta">
+          <span class="price">$16</span>
+          <span class="rating">4.7 (61 reviews)</span>
+        </div>
+        <span class="tag">🍸 Signature Cocktail</span>
+      </div>
+  
+      <!-- Dish 5 -->
+      <div class="dish-card" data-category="mains">
+        <div class="dish-image">
+          <img src="images/steak.jpg" alt="Filet Mignon" />
+          <span class="badge">Premium</span>
+          <div class="hover-info">
+            <p><strong>Calories:</strong> 640 kcal</p>
+            <p><strong>Ingredients:</strong> Angus beef, garlic butter</p>
+            <p><strong>Allergens:</strong> Dairy</p>
+          </div>
+        </div>
+        <h3>Filet Mignon</h3>
+        <p>Center-cut, grilled to perfection</p>
+        <div class="dish-meta">
+          <span class="price">$49</span>
+          <span class="rating">4.9 (142 reviews)</span>
+        </div>
+        <span class="tag">🍖 Prime Cut</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tasting Menu Section -->
+  <section class="tasting-menu" data-aos="fade-up">
+    <div class="tasting-container">
+      <h2 class="section-title">Seasonal Tasting Menu</h2>
+      <p class="section-sub">A curated fine dining journey in 5 or 7 courses</p>
+      <div class="offers-grid">
+        <div class="offer-card">
+          <h4>5-Course Tasting</h4>
+          <p>Appetizer, Main, Dessert + Wine Pairings</p>
+          <span class="tag">$95 pp</span>
+        </div>
+        <div class="offer-card">
+          <h4>7-Course Prestige</h4>
+          <p>Luxury experience with exclusive chef creations</p>
+          <span class="tag">$145 pp</span>
+        </div>
+        <div class="offer-card">
+          <h4>Vegetarian Delight</h4>
+          <p>Plant-based gourmet tasting menu</p>
+          <span class="tag">$85 pp</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chef Recommendation Section -->
+  <section class="chef-highlight" data-aos="fade-left">
+    <div class="chef-highlight-container">
+      <h3>Chef’s Seasonal Recommendation</h3>
+      <p>“Grilled Lobster with Saffron Butter” &mdash; available only this month.</p>
+    </div>
+  </section>
+
+  <!-- Wine Pairing Section -->
+  <section class="wine-pairing" data-aos="fade-right">
+    <div class="wine-pairing-container">
+      <h3>Wine Pairings</h3>
+      <p>Pair your dishes with our handpicked selection of red, white, and sparkling wines curated by our sommelier.</p>
+    </div>
+  </section>
+
+  <!-- Download PDF Button -->
+  <div class="menu-download" data-aos="fade-up">
+    <a href="assets/la-table-royale-menu.pdf" class="btn-outline" download>📄 Download Full Menu</a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column brand">
+        <h3>La Table Royale</h3>
+        <p>Where flavor meets elegance.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="reservations.html">Reservations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <p>📍 123 Gourmet Street, City</p>
+        <p>📞 +1 234 567 890</p>
+        <p>✉️ hello@latable.com</p>
+      </div>
+      <div class="footer-column social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 La Table Royale. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1000, once: true });</script>
+  <script src="js/main.js"></script>
+</body>
+</html>

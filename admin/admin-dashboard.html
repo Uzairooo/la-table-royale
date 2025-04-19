@@ -1,0 +1,120 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard | La Table Royale</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .dashboard-header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    .dashboard-header h1 {
+      font-size: 2.5rem;
+      color: #FFD700;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 215, 0, 0.15);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(255, 215, 0, 0.05);
+      text-align: center;
+    }
+
+    .card h3 {
+      font-size: 1.3rem;
+      color: #FFD700;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .btn-link {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #FFD700;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 30px;
+      transition: 0.3s;
+    }
+
+    .btn-link:hover {
+      background: #e6c200;
+    }
+
+    .logout {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .logout a {
+      color: #ccc;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard-header">
+    <h1>Welcome, Admin</h1>
+    <p>Here’s your overview for La Table Royale</p>
+  </div>
+
+  <div class="dashboard-grid">
+    <div class="card">
+      <h3>Total Bookings</h3>
+      <p>1,245</p>
+    </div>
+    <div class="card">
+      <h3>Today’s Reservations</h3>
+      <p>28</p>
+    </div>
+    <div class="card">
+      <h3>Special Offers Active</h3>
+      <p>3</p>
+    </div>
+    <div class="card">
+      <h3>Reservation Manager</h3>
+      <a href="admin-reservations.html" class="btn-link">View</a>
+    </div>
+    <div class="card">
+      <h3>Menu Editor</h3>
+      <a href="admin-menu-editor.html" class="btn-link">Edit Menu</a>
+    </div>
+    <div class="card">
+      <h3>Settings</h3>
+      <a href="admin-settings.html" class="btn-link">Edit Settings</a>
+    </div>
+  </div>
+
+  <div class="logout">
+    <a href="../admin-login.html">Logout</a>
+  </div>
+</body>
+</html>

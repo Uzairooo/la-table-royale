@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edit Menu | Admin Panel</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../images/favicon.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      background-color: #0c0c0c;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+    }
+
+    .menu-editor-container {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 20px;
+    }
+
+    .menu-editor-container h2 {
+      color: #FFD700;
+      margin-bottom: 30px;
+      font-size: 2.2rem;
+      text-align: center;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .top-bar a {
+      color: #FFD700;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .top-bar a:hover {
+      color: #fff;
+    }
+
+    .dish-form {
+      background-color: #1a1a1a;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.1);
+    }
+
+    .dish-form input,
+    .dish-form textarea,
+    .dish-form select {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #FFD700;
+      background-color: #111;
+      color: #fff;
+      margin-bottom: 18px;
+      font-size: 1rem;
+    }
+
+    .dish-form label {
+      font-weight: bold;
+      margin-bottom: 8px;
+      display: block;
+      color: #FFD700;
+    }
+
+    .btn-gold {
+      background-color: #FFD700;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      padding: 14px 32px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .btn-gold:hover {
+      background-color: #e6c200;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+    }
+
+    .success-msg {
+      display: none;
+      margin-top: 20px;
+      padding: 12px;
+      border-radius: 8px;
+      background-color: #133913;
+      color: #90ee90;
+      font-weight: 500;
+      border: 1px solid #2d722d;
+    }
+
+    @media (max-width: 600px) {
+      .dish-form {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="menu-editor-container">
+    <div class="top-bar">
+      <a href="admin-dashboard.html"><i class="fas fa-arrow-left"></i> Back to Dashboard</a>
+    </div>
+
+    <h2>Edit Menu Items</h2>
+
+    <form class="dish-form" id="menuForm">
+      <label for="dish-name">Dish Name</label>
+      <input type="text" id="dish-name" name="dish-name" placeholder="e.g., Filet Mignon" required>
+
+      <label for="dish-category">Category</label>
+      <select id="dish-category" name="dish-category" required>
+        <option value="">Select Category</option>
+        <option value="starters">Starters</option>
+        <option value="mains">Mains</option>
+        <option value="desserts">Desserts</option>
+        <option value="drinks">Drinks</option>
+      </select>
+
+      <label for="dish-price">Price ($)</label>
+      <input type="number" id="dish-price" name="dish-price" step="0.01" placeholder="e.g., 29.99" required>
+
+      <label for="dish-description">Short Description</label>
+      <textarea id="dish-description" name="dish-description" rows="3" placeholder="e.g., Served with garlic butter and seasonal vegetables" required></textarea>
+
+      <label for="dish-image">Image URL</label>
+      <input type="url" id="dish-image" name="dish-image" placeholder="e.g., images/steak.jpg">
+
+      <button type="submit" class="btn-gold">💾 Save Dish</button>
+    </form>
+
+    <div class="success-msg" id="successMsg">✅ Dish saved successfully!</div>
+  </div>
+
+  <script>
+    const form = document.getElementById("menuForm");
+    const successMsg = document.getElementById("successMsg");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      // Simulate save
+      successMsg.style.display = "block";
+      setTimeout(() => {
+        successMsg.style.display = "none";
+        form.reset();
+      }, 3000);
+    });
+  </script>
+</body>
+</html>
